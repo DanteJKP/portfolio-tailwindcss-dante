@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Tailwind CSS</title>
     <link rel="stylesheet" href="src/output.css">
     <link rel="shortcut icon" href="img/bocilimut.png" type="image/x-icon">
+
+    <!-- Aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
 
@@ -27,7 +30,7 @@
                     </button>
 
                     <nav id="nav-menu" class="hidden lg:block lg:static lg:bg-transparent lg:max-w-full absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full
-                    lg:shadow-none lg:rounded-none">
+                    lg:shadow-none lg:rounded-none ">
                         <ul class="block lg:flex">
                             <li class="group">
                                 <a href="#home" class="text-dark mx-8 py-2 hover:text-primary text-base hover:font-semibold transition duration-300 ease-in-out font-bold flex">Beranda</a>
@@ -55,9 +58,9 @@
 
     <!-- Hero Start -->
 
-    <section id="home" class="pt-[125px] lg:pt-[115px]">
+    <section id="home" class="pt-[125px] lg:pt-[115px] dark:bg-dark">
         <div class="container">
-            <div class="flex flex-wrap">
+            <div class="flex flex-wrap" data-aos="fade-right">
                 <div class="w-full self-center px-4 lg:w-1/2">
                     <h1 class="text-base  font-semibold text-primary md:text-xl lg:text-2xl">Halo Semua ✌, saya <span class="block font-bold text-dark text-4xl mt-1 lg:text-6xl ">Damar Azky</span></h1>
                     <h2 class="font-medium text-slate-500 text-lg mb-5 lg:text-2xl lg:mt-2">Mahasiswa <span class="text-green-900 font-bold">SMK NU Ma'arif Kudus</span></h2>
@@ -68,10 +71,10 @@
                     <a href="https://wa.me/6282114617303" target="_blank" class="px-8 py-3 font-semibold text-base text-white bg-primary rounded-full hover:opacity-80 hover:shadow-black transition duration-300 ease-in-out">Hubungi Saya</a>
                 </div>
                 <div class="w-full self-end px-4 lg:w-1/2">
-                    <div class="mt-10 relative lg:mt-0 lg:right-0">
+                    <div class="mt-10 relative lg:mt-0 lg:right-0" data-aos="fade-left">
                         <img src="img/logo.png" alt="DamarAzky" class="mx-auto max-w-full">
-                        <span class="md:scale-125 absolute bottom-0 -z-10 left-1/2 -translate-x-1/2">
-                            <svg width="400" height="500" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <span class="md:scale-125  sm:w-300 sm:h-350 sm:scale-75 absolute bottom-0 -z-10 left-1/2 -translate-x-1/2">
+                            <svg width="400" height="500"  viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                                 <path fill="#14b8a6" d="M45.3,-38.5C62,-28.7,80.9,-14.3,83.3,2.4C85.7,19.2,71.6,38.3,55,52C38.3,65.7,19.2,73.9,-1.6,75.5C-22.3,77,-44.5,71.9,-53.8,58.2C-63,44.5,-59.1,22.3,
                                 -56.6,2.5C-54.1,-17.3,-53,-34.6,-43.8,-44.4C-34.6,-54.2,-17.3,-56.7,-1.5,-55.2C14.3,-53.7,28.7,-48.4,45.3,-38.5Z"
                                  transform="translate(100 100)" />
@@ -87,7 +90,7 @@
 
     <!-- About Start -->
 
-    <section id="about" class="pt-36 pb-32">
+    <section id="about" class="pt-36 pb-32" data-aos="fade-down-left">
         <div class="container">
             <div class="flex flex-wrap">
                 <div class="w-full px-4 mb-10 lg:w-1/2">
@@ -128,7 +131,9 @@
     <!-- Portfolio Start -->
 
     <section id="portfolio" class="bg-slate-100 pt-36 pb-16">
-        <div class="container">
+        <div class="container" data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-easing="ease-in-sine">
             <div class="w-full px-4">
                 <div class="max-w-xl mx-auto text-center mb-16">
                     <h1 class="font-semibold text-2xl mb-2 text-primary">Album</h1>
@@ -173,6 +178,12 @@
                         ya walau yang difoto ini tidak semuanya karena tidak punya foto bersama sekelas.
                     </p>
                 </div>
+                <div class="flex bg-primary rounded shadow-md font-bold text-md hover:bg-dark hover:rotate-2 hover:animate-pulse transition duration-300 ease-in-out">
+                <a href="" class="justify-center hidden items-center left-1/2 -translate-1/2 px-4 text-white">
+                    continue
+                </a>
+                </div>  
+
             </div>
         </div>
     </section>
@@ -182,7 +193,8 @@
     <!-- Client Start -->
 
     <section id="blog" class="pt-10 pb-10 bg-slate-700">
-        <div class="container">
+        <div class="container" data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom">
             <div class="w-full px-4">
                 <div class="max-w-xl mx-auto text-center mb-5">
                     <h1 class="font-semibold text-xl mb-2 text-primary lg:text-2xl">Guru</h1>
@@ -200,7 +212,8 @@
     <!-- Contact Start -->
 
     <div class="pt-36 pb-32" id="contact">
-        <div class="container">
+        <div class="container" data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom">
             <div class="w-full px-4">
                 <div class="mx-auto max-w-full text-center mb-16">
                     <h4 class="font-bold uppercase text-primary mb-2">Contact</h4>
@@ -317,7 +330,21 @@
 
     <!-- Footer End -->
 
+    <!-- Bakk Top Start -->
+
+    <a href="#home" id="to-tap" class="fixed hover:animate-pulse hidden justify-center items-center z-[9999] bottom-5 right-5 rounded-full h-10 w-10 p-4 bg-teal-500">
+        <span class="block h-2 w-2  border-t-2 border-l-2 rotate-45"></span>
+    </a>
+
+    <!-- Back Top End -->
+
 
 <script src="js/script.js"></script>
+
+<!-- Aos -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
